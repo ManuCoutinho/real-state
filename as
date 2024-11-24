@@ -1,0 +1,3 @@
+    Todos os requisitos das semanas anteriores.
+    Salvar em um arquivo de texto os dados de cada financiamento. Cada linha do arquivo deve conter o valor do imóvel, o valor do financiamento, a taxa de juros, o prazo de financiamento e os atributos específicos da classe especializada (exemplo: o andar do apartamento, caso seja um financiamento de apartamento, ou a área construída para uma casa). Depois, leia novamente esses mesmos dados para comprovar que foram salvos corretamente.
+    Salve um arquivo contendo os dados serializados dos financiamentos. Isto é, salve um arquivo contendo o ArrayList de financiamentos que você criou no método main(). Depois, leia novamente esses mesmos dados para comprovar que foram salvos corretamente.
