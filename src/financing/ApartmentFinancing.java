@@ -15,6 +15,7 @@ public class ApartmentFinancing extends Financing {
 
 	@Override
 	public double calculateMonthlyPaymentCalc() {
+
 		double monthlyFee = this.annualInterestRate / 12;
 		double termInMonths = this.financingTerm * 12;
 		return this.realtyPrice * (1 + monthlyFee * Math.pow(monthlyFee, termInMonths))
@@ -41,5 +42,6 @@ public class ApartmentFinancing extends Financing {
 			st.append("Total do financimento: ").append(BRL.format(super.calculateTotalAmount())).append("\n");
 		}
 		return st.toString();
+
 	}
 }

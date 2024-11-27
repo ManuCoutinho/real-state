@@ -2,11 +2,13 @@ package financing;
 
 import util.*;
 
-public class LandFinancing extends Financing {
+
+
+public class LandFinancing extends Financing{
 	/**
 	 * nominally highlighted value, can be modified in the future by a set method
 	 */
-	private double landIncrease = 0.02;
+	private double landIncrease = 1.02;
 	private ZoneType type;
 
 	public LandFinancing(double value, int term, double fee, ZoneType zone) {
@@ -40,5 +42,6 @@ public class LandFinancing extends Financing {
 			st.append("Total do financimento: ").append(BRL.format(super.calculateTotalAmount())).append("\n");
 		}
 		return st.toString();
+
 	}
 }

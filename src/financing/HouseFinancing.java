@@ -14,12 +14,12 @@ public class HouseFinancing extends Financing {
 		super(value, term, fee);
 		this.builtArea = builtArea;
 		this.landArea = landArea;
-		//writer??
+
 	}
 
 	/**
 	 * Calculate monthly installment amount for home financing
-	 *
+
 	 * @return double
 	 */
 	@Override
@@ -63,5 +63,6 @@ public class HouseFinancing extends Financing {
 			st.append("Total do financimento: ").append(USD.format(super.calculateTotalAmount())).append("\n");
 		}
 		return st.toString();
+
 	}
 }

@@ -1,10 +1,12 @@
 package util;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.stream.Collectors;
 
 import financing.Financing;
+
 
 /**
  * Utility static class for formatting output displayed to the user
@@ -14,7 +16,6 @@ public class Calculate {
 	/**
 	 * Calculate individual and cumulative values for a list of Financing.
 	 * Receives as arguments a list of Financing and the type of output: USD/BRL
-	 *
 	 * @param list ArrayList<Financing>
 	 * @param type int
 	 * @return HashMap<String, String>
@@ -30,6 +31,7 @@ public class Calculate {
 			count += 1;
 			financingAcc += q.calculateTotalAmount();
 			propertyAcc += q.getRealtyPrice();
+
 			if (type == 2) {
 				var formatedString = String.format("Financiamento %d - valor do imóvel: %s, valor do financiamento: %s",
 					count, BRL.format(q.getRealtyPrice()), BRL.format(q.calculateTotalAmount()));
@@ -43,6 +45,7 @@ public class Calculate {
 
 		}
 
+
 		if (type == 1) {
 			amounts.put("properties", USD.format(propertyAcc));
 			amounts.put("financings", USD.format(financingAcc));
@@ -51,12 +54,10 @@ public class Calculate {
 		if (type == 2) {
 			amounts.put("properties", BRL.format(propertyAcc));
 			amounts.put("financings", BRL.format(financingAcc));
+
 		}
 		amounts.put("isolated", isolatedValues.stream().collect(Collectors.joining("\n")));
 		return amounts;
 	}
 
-	public static String formatWithTwoDecimalPlaces(double value) {
-		return String.format("%.2f", value);
-	}
 }

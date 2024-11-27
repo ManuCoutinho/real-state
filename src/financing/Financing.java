@@ -1,11 +1,9 @@
 package financing;
 
 import util.BRL;
-import util.Calculate;
 import util.USD;
 
 import java.io.Serializable;
-import java.util.HashMap;
 
 /**
  * Represents a financing.
